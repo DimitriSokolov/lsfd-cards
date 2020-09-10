@@ -107,6 +107,6 @@ const Web = new function() {
     });
 
     $("#save").click(function() {
-        document.window.location = Card.context.canvas.toDataURL("png");
+        window.location = Card.context.canvas.toDataURL("png");
     });
 };
