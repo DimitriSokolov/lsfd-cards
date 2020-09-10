@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Odense;
+
+    src: url(fonts/Odense.ttf);
+}
+
+@font-face {
+    font-family: BrushScript;
+
+    src: url(fonts/BrushScript.ttf);
+}
+
+@font-face {
+    font-family: CushingStd;
+
+    src: url(fonts/CushingStd.otf);
+}
