@@ -107,6 +107,38 @@ const Web = new function() {
     });
 
     $("#save").click(function() {
-        window.location = Card.context.canvas.toDataURL("png");
+        //window.location = Card.context.canvas.toDataURL("png");
+    
+        alert("i'll get on this later, just right click on the card and save to computer for now :(");
+    });
+
+    $("#upload").click(function() {
+        try {
+            var img = $("#card")[0].toDataURL("image/jpeg", 0.9).split(',')[1];
+        }
+        catch(e) {
+            var img = $("#card")[0].toDataURL().split(',')[1];
+        }
+
+        $.ajax({
+            url: 'https://api.imgur.com/3/image',
+            type: 'post',
+            headers: {
+                Authorization: 'Client-ID c11d16c7c72ccad'
+            },
+            data: {
+                image: img
+            },
+            
+            dataType: 'json',
+            
+            success: function(response) {
+                if(response.success) {
+                    window.location = response.data.link;
+                }
+                else
+                    alert("imgur might be down or something went wrong.");
+            }
+        });
     });
 };
