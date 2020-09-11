@@ -32,7 +32,7 @@ const Card = new function() {
 
         this.context.font = "bold 14px serif";
         this.context.textAlign = "right";
-        this.context.fillText(Web.get("chief"), this.size[0] - this.padding + 10, this.padding + 52);
+        this.context.fillText(Web.get("chief"), this.size[0] - this.padding + 10, this.padding + 50);
 
         this.context.font = "14px CushingStd";
         this.context.textAlign = "left";
@@ -63,7 +63,7 @@ const Card = new function() {
         this.context.fillText("Office: (213) 1-800-FIRE", this.size[0] - this.padding + 10, this.padding + 160);
         this.context.fillText("Cell: (000) " + Web.get("number"), this.size[0] - this.padding + 10, this.padding + 178);
         this.context.fillText("Fax: (213) 978-3813", this.size[0] - this.padding + 10, this.padding + 196);
-        this.context.fillText(Web.get("serial") + "@lsfd.online", this.size[0] - this.padding + 10, this.padding + 214);
+        this.context.fillText(Web.get("serial") + "@lsfd.org", this.size[0] - this.padding + 10, this.padding + 214);
     };
 
     this.render = () => {
