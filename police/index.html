@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/fonts.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body onload="Card.render()">
+        <div class="container">
+            <canvas id="card" width="375" height="200"></canvas>
+
+            <div>
+                <input id="position" type="text" placeholder="Position..." value="Police Officer I">
+
+                <input id="name" type="text" placeholder="Name..." value="Isabel Valencia">
+            </div>
+
+            <div>
+                <label for="number">(000)</label>
+                <input id="number" type="text" placeholder="Number..." value="72-201">
+                
+                <label for="serial">@lspd.online</label>
+                <input id="serial" type="text" placeholder="Serial..." value="72201">
+            </div>
+
+            <div>
+                <input id="bureau" type="text" placeholder="Bureau..." value="Operations Bureau">
+
+                <input id="chief" type="text" placeholder="Chief of Police..." value="Chief of Police Robert Tillman">
+            </div>
+    
+            <div>
+                <button id="save">Save to Computer</button>
+
+                <button id="upload">Upload to Imgur</button>
+            </div>
+        </div>
+
+
+        <div id="background" style="opacity: 0">
+            <p style="font-family: Odense">Odense</p>
+            <p style="font-family: BrushScript">BrushScript</p>
+            <p style="font-family: CushingStd">CushingStd</p>
+        </div>
+
+        <script type="text/javascript" src="scripts/libraries/jquery.min.js"></script>
+
+        <script type="text/javascript" src="scripts/index.js?v=110920201736"></script>
+    </body>
+</html>
