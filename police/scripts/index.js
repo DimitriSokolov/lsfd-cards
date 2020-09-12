@@ -54,8 +54,8 @@ const Card = new function() {
         this.context.font = "14px Helvetica";
         
         this.context.fillText(Web.get("bureau"), this.padding - 10, this.padding + 160);
-        this.context.fillText("206 Station Avenue", this.padding - 10, this.padding + 178);
-        this.context.fillText("Los Santos, SA 97447", this.padding - 10, this.padding + 196);
+        this.context.fillText(Web.get("street"), this.padding - 10, this.padding + 178);
+        this.context.fillText(Web.get("area"), this.padding - 10, this.padding + 196);
         this.context.fillText("www.pd.lsgov.us", this.padding - 10, this.padding + 214);
         
         this.context.textAlign = "right";
