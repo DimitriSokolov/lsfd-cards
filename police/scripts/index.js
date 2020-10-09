@@ -56,14 +56,14 @@ const Card = new function() {
         this.context.fillText(Web.get("bureau"), this.padding - 10, this.padding + 160);
         this.context.fillText(Web.get("street"), this.padding - 10, this.padding + 178);
         this.context.fillText(Web.get("area"), this.padding - 10, this.padding + 196);
-        this.context.fillText("www.pd.lsgov.us", this.padding - 10, this.padding + 214);
+        this.context.fillText("www.lspd.online (( lspd.gta.world ))", this.padding - 10, this.padding + 214);
         
         this.context.textAlign = "right";
 
         this.context.fillText(Web.get("serial") + "@lspd.online", this.size[0] - this.padding + 10, this.padding + 160);
-        this.context.fillText("Cell: (000) " + Web.get("number"), this.size[0] - this.padding + 10, this.padding + 178);
-        this.context.fillText("Fax: (213) 486-5270", this.size[0] - this.padding + 10, this.padding + 196);
-        this.context.fillText("Office: (213) 1-800-POLICE", this.size[0] - this.padding + 10, this.padding + 214);
+        this.context.fillText("Personal Cell: "Web.get("number"), this.size[0] - this.padding + 10, this.padding + 178);
+        this.context.fillText("Work Cell: "Web.get("numbercp"), this.size[0] - this.padding + 10, this.padding + 196);
+        this.context.fillText("Landline: 991", this.size[0] - this.padding + 10, this.padding + 214);
     };
 
     this.render = () => {
