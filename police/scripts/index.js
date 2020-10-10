@@ -63,7 +63,7 @@ const Card = new function() {
         this.context.fillText(Web.get("serial") + "@lspd.online", this.size[0] - this.padding + 10, this.padding + 160);
         this.context.fillText("Personal Cell: " + Web.get("number"), this.size[0] - this.padding + 10, this.padding + 178);
         this.context.fillText("Work Cell: " + Web.get("numbercp"), this.size[0] - this.padding + 10, this.padding + 196);
-        this.context.fillText("Landline: 991", this.size[0] - this.padding + 10, this.padding + 214);
+        this.context.fillText("Landline: 91", this.size[0] - this.padding + 10, this.padding + 214);
     };
 
     this.render = () => {
