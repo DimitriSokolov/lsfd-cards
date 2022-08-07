@@ -8,8 +8,12 @@ const Card = new function() {
     this.context = this.$canvas[0].getContext("2d");
 
     this.drawOutline = () => {
-        this.context.rect(0, 0, this.size[0], this.size[1]);
 
+        this.context.fillStyle = "#FFFFFF";
+
+        this.context.rect(0, 0, this.size[0], this.size[1]);
+        
+        this.context.fill();
         this.context.stroke();
     };
 
@@ -107,9 +111,28 @@ const Web = new function() {
     });
 
     $("#save").click(function() {
+        
+        var lnk = document.createElement('a'), e;
+
+        lnk.download = "card";
+
+        lnk.href = Card.context.canvas.toDataURL("image/png;base64");
+
+        if (document.createEvent) {
+            e = document.createEvent("MouseEvents");
+            e.initMouseEvent("click", true, true, window,
+                            0, 0, 0, 0, 0, false, false, false,
+                            false, 0, null);
+
+            lnk.dispatchEvent(e);
+        } else if (lnk.fireEvent) {
+            lnk.fireEvent("onclick");
+        }
+    
+        
         //window.location = Card.context.canvas.toDataURL("png");
     
-        alert("i'll get on this later, just right click on the card and save to computer for now :(");
+        //alert("i'll get on this later, just right click on the card and save to computer for now :(");
     });
 
     $("#upload").click(function() {
@@ -119,6 +142,7 @@ const Web = new function() {
         catch(e) {
             var img = $("#card")[0].toDataURL().split(',')[1];
         }
+
 
         $.ajax({
             url: 'https://api.imgur.com/3/image',
